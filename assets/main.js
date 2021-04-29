@@ -13,4 +13,6 @@ if (parolaArray == parolaReverse){
         return alert ('la parola inserita non è palindroma');
     }
 }
+
+var risultato = palindroma(parola);
  
