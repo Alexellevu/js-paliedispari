@@ -1,15 +1,15 @@
-var parola = prompt('inserisci una parola');
-console.log(parola.split(''));
-var parolaArray =  parola.split('');
+var parola = 'ciao';
+console.log(parola);
+
+function palindroma(parola){
+var parolaArray = parola.split('');
 console.log(parolaArray);
-var parolaArrayReverse = parolaArray.reverse();
-console.log(parolaArrayReverse);
- 
-function palindroma(p1 , p2){
-    if (p1 == p2){
-        return alert('la parola è palindroma');}
-        else{
-           return alert('la parola non è palindorma') ;
-        }
-     
+var parolaReverse = parolaArray.reverse();
+console.log(parolaReverse); 
+if (parolaArray ==parolaReverse){
+    return alert ('la parola inserita è palindroma')}
+    else{
+        return alert ('la parola inserita non è palindroma');
+    }
 }
+ 
