@@ -10,6 +10,7 @@ while(scelta != 'pari' && scelta != 'dispari')
   scelta = prompt('pari o dispari?');
 }
 console.log(scelta);
+document.getElementById('sceltaPD').innerHTML = 'Hai scelto ' + scelta;
 //controllo che il numero inserito dall' utente stia tra 1 e 5
 var sceltaNum =parseInt(prompt('scegli un numero da 1 a 5'));
 while(sceltaNum > 5 || sceltaNum < 0){
@@ -17,6 +18,8 @@ while(sceltaNum > 5 || sceltaNum < 0){
   sceltaNum = prompt('scegli un numero da 1 a 5');
 }
 console.log(sceltaNum);
+document.getElementById('numgiocatore').innerHTML = 'Hai scelto il numero:  ' +sceltaNum;
+
 
 
 function getRandomInt(min, max) {
@@ -29,6 +32,7 @@ function getRandomInt(min, max) {
 
 var numPc = parseInt(getRandomInt()); 
 console.log(numPc);
+document.getElementById('sceltaPC').innerHTML = 'il numero estratto per il PC è : ' + numPc;
 
 function pariDispari(n1 , n2){
   var n1 , n2 ,finale;
@@ -46,12 +50,16 @@ function pariDispari(n1 , n2){
 var risultato = pariDispari(sceltaNum, numPc);
 console.log(risultato);
 
+var sommanumeri = sceltaNum + numPc;
+console.log(sommanumeri);
+document.getElementById('sommagioco').innerHTML = 'il totale è  ' + sommanumeri ;
+
 
 if (risultato == scelta){
-   document.getElementById('verdetto').innerHTML = 'il risultato è ' + scelta + ' hai vinto';
+   document.getElementById('verdetto').innerHTML = 'il risultato è ' + scelta + ' hai vinto!!!';
   console.log('hai vinto');
 }
  else{
- document.getElementById('verdetto').innerHTML = 'hai perso';
+ document.getElementById('verdetto').innerHTML = 'Hai perso!!!';
  console.log('hai perso');
  } 
